@@ -43,5 +43,7 @@ class KategoriController extends Controller
 
         $data = DB::table('m_kategori')->get();
         return view('kategori', ['data' => $data]);
+        $data = DB::select('select * from m_kategori');
+        return view('kategori', ['data' => $data] );
     }
 }
