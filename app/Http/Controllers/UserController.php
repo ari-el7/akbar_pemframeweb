@@ -251,7 +251,7 @@ class UserController extends Controller
         // );
         // return 'Delete data user berhasil. Jumlah data yg dihapus: '.$row.' baris';
 
-        $data = DB::select('select * from m_user');
-        return view('user', ['data' => $data] );
-    }
+    //     $data = DB::select('select * from m_user');
+    //     return view('user', ['data' => $data] );
+    // }
 }
