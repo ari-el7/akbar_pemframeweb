@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+<<<<<<< HEAD
 use App\Models\StokModel;
 use App\Models\SupplierModel;
 use App\Models\BarangModel;
@@ -12,10 +13,13 @@ use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory; // Excel
 use Barryvdh\DomPDF\Facade\Pdf;         // PDF
+=======
+>>>>>>> 8ff7ed2912a5ba3f923844970145ce6766b169aa
 
 class StokController extends Controller
 {
     public function index() {
+<<<<<<< HEAD
         $breadcrumb = (object) ['title' => 'Daftar Stok Barang', 'list' => ['Home', 'Stok']];
         $page = (object) ['title' => 'Daftar stok barang yang tersimpan dalam sistem'];
         $activeMenu = 'stok';
@@ -341,4 +345,25 @@ class StokController extends Controller
     //     $data = DB::select('select * from t_stok');
     //     return view('stok', ['data' => $data] );
     // }
+=======
+
+        // DB::insert('insert into t_stok (supplier_id, barang_id, user_id, stok_tanggal, stok_jumlah, created_at) values(?, ?, ?, ?, ?, ?)', 
+        //     [1, 1, 1, now(), 50, now()]
+        // );
+        // return 'Insert data stok baru berhasil';
+
+        // $row = DB::update('update t_stok set stok_jumlah = ? where stok_id = ?', 
+        //     [55, 16]
+        // );
+        // return 'Update data stok berhasil. Jumlah data yg di update: '.$row.' baris';
+
+        // $row = DB::delete('delete from t_stok where stok_id = ?', 
+        //     [16]
+        // );
+        // return 'Delete data stok berhasil. Jumlah data yg dihapus: '.$row.' baris';
+
+        $data = DB::select('select * from t_stok');
+        return view('stok', ['data' => $data] );
+    }
+>>>>>>> 8ff7ed2912a5ba3f923844970145ce6766b169aa
 }
